@@ -1,10 +1,16 @@
 #print ('Hello Word')
 
-def AffichageHelloWord():
+def LectureStringHelloWord():
+    File = open('StringHelloWord.txt','r')
+    ReadText = File.read()
+    return (ReadText)
+
+def AffichageHelloWord(Text):
     ''' 
     Affiche Hello Word
     '''
-    print ('Hello Word')
+    print ('%s'%Text)
     return()
     
-AffichageHelloWord()    
+HelloWord = LectureStringHelloWord()
+AffichageHelloWord(HelloWord)    
